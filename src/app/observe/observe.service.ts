@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {environment} from '../../environments/environment';
+import {Trace} from './Trace';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -15,7 +16,7 @@ export class ObserveService {
   }
 
   getTraces() {
-    return this.http.get(this.configUrl, httpOptions);
+    return this.http.get<Trace[]>(this.configUrl, httpOptions);
   }
 
 }
