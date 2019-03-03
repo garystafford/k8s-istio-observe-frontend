@@ -1,7 +1,10 @@
 <div *ngIf="traces">
+  <h3>Service Traces</h3>
   <ul>
     <li *ngFor="let trace of traces">
-      <span>{{trace.serviceName}}</span>
+      <div>Service:&nbsp;{{trace.serviceName}}</div>
+      <div>Id:&nbsp;{{trace.id}}</div>
+      <div>Timestamp:&nbsp;{{trace.createdAt}}</div>
     </li>
   </ul>
 </div>
