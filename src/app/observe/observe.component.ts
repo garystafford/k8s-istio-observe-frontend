@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ObserveService} from "./observe.service";
 
 @Component({
@@ -10,11 +10,15 @@ export class ObserveComponent implements OnInit {
 
   public traces;
 
-  constructor(private _service: ObserveService) { }
+  constructor(private _service: ObserveService) {
+  }
 
   ngOnInit() {
     this._service.getTraces().subscribe(
-      data => { this.traces = data; console.log(this.traces) },
+      data => {
+        this.traces = data;
+        console.log(this.traces)
+      },
       err => console.log(err),
       () => console.log('Done loading traces')
     )
