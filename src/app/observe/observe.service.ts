@@ -10,7 +10,7 @@ export class ObserveService {
 
   constructor(private http: HttpClient) { }
 
-  configUrl = 'http://service-a:8000/ping';
+  configUrl = 'http://service-a:8100/ping';
   // configUrl = 'http://localhost:8100/ping';
 
   getTraces() {
