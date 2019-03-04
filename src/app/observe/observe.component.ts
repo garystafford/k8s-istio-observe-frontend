@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ObserveService} from "./observe.service";
+import {Trace} from './Trace';
 
 @Component({
   selector: 'app-observe',
@@ -8,7 +9,7 @@ import {ObserveService} from "./observe.service";
 })
 export class ObserveComponent implements OnInit {
 
-  public traces;
+  public traces: Trace[];
 
   constructor(private _service: ObserveService) {
   }

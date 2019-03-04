@@ -4,3 +4,6 @@ body {
   text-align: left;
   line-height: 16pt;
 }
+li {
+  margin-bottom: 6px;
+}

@@ -1,11 +1,11 @@
 <div *ngIf="traces">
   <h3>Service Traces</h3>
-  <ul>
+  <ol>
     <li *ngFor="let trace of traces">
-      <div>Service:&nbsp;{{trace.service}}</div>
-      <div>Greeting:&nbsp;{{trace.greeting}}</div>
-      <div>Id:&nbsp;{{trace.id}}</div>
-      <div>Timestamp:&nbsp;{{trace.created}}</div>
+      <div><b>{{trace.service}}</b></div>
+      <div><i>{{trace.greeting}}</i></div>
+      <div>{{trace.id}}</div>
+      <div>{{trace.created}}</div>
     </li>
-  </ul>
+  </ol>
 </div>

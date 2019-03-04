@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  configUrl: 'http://localhost:8000/ping'
+  configUrl: 'http://localhost:8100/api/ping'
 };
