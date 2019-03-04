@@ -1,27 +1,17 @@
-# ObserveStack
+# k8s-istio-observe-frontend
+_In Progress_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
+Angular 7 front-end application for [golang-srv-demo](https://github.com/garystafford/golang-srv-demo).
 
-## Development server
+## Misc Commands
+```bash
+david
+ng update @angular/cli --migrate-only --from=5.0.0
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+yarn install
+yarn add typescript@">=3.1.1 and <3.3.0"
+ng serve --open
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+time docker build -t garystafford/angular-observe:1.0.0 . --no-cache
+docker run -p 80:80 garystafford/angular-observe:1.0.0
+```
