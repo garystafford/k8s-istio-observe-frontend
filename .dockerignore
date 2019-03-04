@@ -1,1 +1,12 @@
 node_modules/
+e2e/
+dist/
+
+.editorconfig
+.gitignore
+
+Dockerfile
+karma.conf.js
+LICENSE.md
+protractor.conf.js
+README.md
