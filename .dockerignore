@@ -1,9 +1,12 @@
 node_modules/
 e2e/
 dist/
+.idea/
+.git/
 
 .editorconfig
 .gitignore
+.dockerignore
 
 Dockerfile
 karma.conf.js
