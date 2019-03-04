@@ -4,10 +4,12 @@ _Project in Progress_
 
 Angular 7 front-end application for [golang-srv-demo](https://github.com/garystafford/golang-srv-demo).
 
+![preview](pics/preview.jpg)
 ## Misc Commands
 
 ```bash
-david
+david # update Angular to 5.0.0
+
 ng update @angular/cli --migrate-only --from=5.0.0
 
 yarn install
