@@ -1,5 +1,11 @@
+<h3>API URL</h3>
+<div>
+  <label for="apiUrl">Service A URL:</label>&nbsp;
+  <input id="apiUrl" type = "text" [(ngModel)]="apiURL" value={{apiURL}}/>&nbsp;
+  <button (click)="changeApiUrl()">Submit</button>
+</div>
+<h3>Service Traces</h3>
 <div *ngIf="traces">
-  <h3>Service Traces</h3>
   <ol>
     <li *ngFor="let trace of traces">
       <div><b>{{trace.service}}</b></div>

@@ -7,3 +7,10 @@ body {
 li {
   margin-bottom: 6px;
 }
+input {
+  width: 200px;
+}
+
+label {
+  font-size: 10pt;
+}

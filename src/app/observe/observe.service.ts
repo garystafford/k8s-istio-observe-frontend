@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Trace} from './Trace';
 
@@ -10,13 +10,13 @@ const httpOptions = {
 @Injectable()
 export class ObserveService {
 
-  configUrl = environment.configUrl;
+  configUrlTmp = environment.configUrl;
 
   constructor(private http: HttpClient) {
   }
 
-  getTraces() {
-    return this.http.get<Trace[]>(this.configUrl, httpOptions);
+  getTraces(apiURL) {
+    return this.http.get<Trace[]>(apiURL, httpOptions);
   }
 
 }
