@@ -10,7 +10,7 @@ import {Trace} from './Trace';
 export class ObserveComponent implements OnInit {
 
   public traces: Trace[];
-  private apiURL: string;
+  public apiURL: string;
   private apiURLFull: string;
 
   constructor(private _service: ObserveService) {
