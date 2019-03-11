@@ -2,7 +2,8 @@
 
 _Project in Progress_
 
-Angular 7 front-end application for [golang-srv-demo](https://github.com/garystafford/golang-srv-demo).
+Angular 7 front-end application, part of a reference distributed system platform. Refer to the post, [Kubernetes-based Microservice Observability with Istio Service Mesh: Part 1](https://wp.me/p1RD28-6fL) and the GitHub project, [k8s-istio-observe-backend](https://github.com/garystafford/k8s-istio-observe-backend) for more information.
+
 
 ![preview](pics/preview.jpg)
 ## Misc Commands
