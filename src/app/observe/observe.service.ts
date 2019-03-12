@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {environment} from '../../environments/environment';
+// import {environment} from '../../environments/environment';
 import {Trace} from './Trace';
+import {NGXLogger} from 'ngx-logger';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -10,13 +11,16 @@ const httpOptions = {
 @Injectable()
 export class ObserveService {
 
-  configUrlTmp = environment.configUrl;
+  // configUrlTmp = environment.configUrl;
 
-  constructor(private http: HttpClient) {
+  constructor(private _http: HttpClient, private _logger: NGXLogger) {
   }
 
   getTraces(apiURL) {
-    return this.http.get<Trace[]>(apiURL, httpOptions);
+    this._logger.debug('apiURL:', apiURL);
+    this._logger.debug('httpOptions:', httpOptions);
+
+    return this._http.get<Trace[]>(apiURL, httpOptions);
   }
 
 }

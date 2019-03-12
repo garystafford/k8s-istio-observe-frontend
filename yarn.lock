@@ -3799,6 +3799,13 @@ neo-async@^2.5.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
 
+ngx-logger@^3.3.12:
+  version "3.3.12"
+  resolved "https://registry.yarnpkg.com/ngx-logger/-/ngx-logger-3.3.12.tgz#203587cf0176462ea9bc0403e3e75d5324c5c7a2"
+  integrity sha512-qO5+WUcCFGM5E+m/SEhz3FrL9UR3l2Q3ZgrlvBsCn+ihyn4G8rhFrUMsidTMSvTJq9NLF6UOqnWh4BOmXHF33Q==
+  dependencies:
+    tslib "^1.9.0"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"

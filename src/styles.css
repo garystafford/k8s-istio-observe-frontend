@@ -3,14 +3,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   line-height: 16pt;
+  font-size: 16pt;
 }
 li {
   margin-bottom: 6px;
+  font-size: 12pt;
 }
 input {
   width: 200px;
-}
-
-label {
-  font-size: 10pt;
+  font-size: 12pt;
 }
