@@ -1,17 +1,28 @@
-<h3>API URL</h3>
-<div>
-  <label for="apiUrl">Service A URL:</label>&nbsp;
-  <input id="apiUrl" type="text" [(ngModel)]="apiURL" value={{apiURL}}/>&nbsp;
-  <button (click)="changeApiUrl()">Submit</button>
-</div>
-<h3>Service Traces</h3>
-<div *ngIf="traces">
-  <ol>
-    <li *ngFor="let trace of traces">
-      <div><b>{{trace.service}}</b></div>
-      <div><i>{{trace.greeting}}</i></div>
-      <div>{{trace.id}}</div>
-      <div>{{trace.created}}</div>
-    </li>
-  </ol>
+<div class="container">
+  <div class="row">
+    <label for="apiUrl">Service-A URL:</label>&nbsp;
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">http://</span>
+      </div>
+      <input id="apiUrl" type="text" class="form-control" [(ngModel)]="apiURL" value={{apiURL}}/>&nbsp;
+      <button class="btn btn-primary" (click)="changeApiUrl()">Submit</button>
+    </div>
+  </div>
+  <div class="row">
+    <h3>Service Traces</h3>
+  </div>
+  <div class="row">
+    <div *ngIf="traces">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let trace of traces">
+          <h5>{{trace.service}}</h5>
+          <i>{{trace.greeting}}</i><br/>
+          <small class="text-muted">{{trace.id}}</small>
+          <br/>
+          <small class="text-muted">{{trace.created}}</small>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
