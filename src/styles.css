@@ -1,25 +1,4 @@
-/*!* You can add global styles to this file, and also import other style files *!*/
-/*body {*/
-  /*font-family: Arial, Helvetica, sans-serif;*/
-  /*text-align: left;*/
-  /*line-height: 16pt;*/
-  /*font-size: 16pt;*/
-/*}*/
-
-/*li {*/
-  /*margin-bottom: 6px;*/
-  /*font-size: 12pt;*/
-/*}*/
-
-/*label {*/
-  /*font-size: 12pt;*/
-/*}*/
-
-/*input {*/
-  /*width: 200px;*/
-  /*font-size: 12pt;*/
-/*}*/
-
-/*button {*/
-
-/*}*/
+div.container {
+  margin-top: 18px;
+  /*margin-left: 36px;*/
+}
