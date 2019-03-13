@@ -5,16 +5,16 @@
       <div class="input-group-prepend">
         <span class="input-group-text">http://</span>
       </div>
-      <input id="apiUrl" type="text" class="form-control" [(ngModel)]="apiURL" value={{apiURL}}/>&nbsp;
+      <input id="apiUrl" type="text" class="form-control" [(ngModel)]="apiURL" value={{apiURL}}/>&nbsp;&nbsp;
       <button class="btn btn-primary" (click)="changeApiUrl()">Submit</button>
     </div>
   </div>
   <div class="row">
-    <h3>Service Traces</h3>
+    <h4>Service Traces</h4>
   </div>
   <div class="row">
-    <div *ngIf="traces">
-      <ul class="list-group">
+    <div id="traces" *ngIf="traces">
+      <ul class="card-columns">
         <li class="list-group-item" *ngFor="let trace of traces">
           <h5>{{trace.service}}</h5>
           <i>{{trace.greeting}}</i><br/>

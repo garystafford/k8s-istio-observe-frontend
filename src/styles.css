@@ -2,3 +2,13 @@ div.container {
   margin-top: 18px;
   /*margin-left: 36px;*/
 }
+
+div#traces {
+  margin-top: 18px;
+}
+
+li {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
