@@ -5,22 +5,22 @@
       <div class="input-group-prepend">
         <span class="input-group-text">http://</span>
       </div>
-      <input id="apiUrl" type="text" class="form-control" [(ngModel)]="apiURL" value={{apiURL}}/>&nbsp;&nbsp;
-      <button class="btn btn-primary" (click)="changeApiUrl()">Submit</button>
+      <input [(ngModel)]="apiURL" class="form-control" id="apiUrl" type="text" value={{apiURL}}/>&nbsp;&nbsp;
+      <button (click)="changeApiUrl()" class="btn btn-primary">Submit</button>
     </div>
   </div>
   <div class="row">
-    <h4>Service Traces</h4>
+    <h4>Service Responses</h4>
   </div>
   <div class="row">
-    <div id="traces" *ngIf="traces">
+    <div *ngIf="greetings" id="greetings">
       <ul class="card-columns">
-        <li class="list-group-item" *ngFor="let trace of traces">
-          <h5>{{trace.service}}</h5>
-          <i>{{trace.greeting}}</i><br/>
-          <small class="text-muted">{{trace.id}}</small>
+        <li *ngFor="let greeting of greetings" class="list-group-item">
+          <h5>{{greeting.service}}</h5>
+          <i>{{greeting.message}}</i><br/>
+          <small class="text-muted">{{greeting.id}}</small>
           <br/>
-          <small class="text-muted">{{trace.created}}</small>
+          <small class="text-muted">{{greeting.created}}</small>
         </li>
       </ul>
     </div>

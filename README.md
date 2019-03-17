@@ -1,4 +1,4 @@
-# k8s-istio-observe-frontend
+# Go-based Microservices Observability Demo with Istio 1.0.x
 
 _Project in Progress_
 

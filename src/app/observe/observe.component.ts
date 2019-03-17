@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ObserveService} from './observe.service';
-import {Trace} from './Trace';
+import {Greeting} from './Greeting';
 import {NGXLogger} from 'ngx-logger';
 
 @Component({
@@ -10,7 +10,7 @@ import {NGXLogger} from 'ngx-logger';
 })
 export class ObserveComponent implements OnInit {
 
-  public traces: Trace[];
+  public greetings: Greeting[];
   public apiURL: string;
   private apiURLFull: string;
 
@@ -26,15 +26,15 @@ export class ObserveComponent implements OnInit {
     this._logger.info('apiURLFull:', this.apiURLFull);
 
     const t0 = performance.now();
-    this._service.getTraces(this.apiURLFull).subscribe(
+    this._service.getGreetings(this.apiURLFull).subscribe(
       data => {
-        this.traces = data;
-        this._logger.debug('traces:', this.traces);
+        this.greetings = data;
+        this._logger.debug('greetings:', this.greetings);
       },
       err => this._logger.error(err.message),
       () => {
         const t1 = performance.now();
-        return this._logger.info('Call to getTraces took ' + (t1 - t0).toFixed(2) + ' ms');
+        return this._logger.info('Call to getGreetings took ' + (t1 - t0).toFixed(2) + ' ms');
       }
     );
 

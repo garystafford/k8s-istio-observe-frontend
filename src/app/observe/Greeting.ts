@@ -1,6 +1,6 @@
-export interface Trace {
+export interface Greeting {
   service: string;
   id: string;
-  greeting: string;
+  message: string;
   created: Date;
 }
