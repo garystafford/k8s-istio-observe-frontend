@@ -12,7 +12,9 @@ export class ObserveComponent implements OnInit {
 
   public greetings: Greeting[];
   public apiURL: string;
-  private apiURLFull: string;
+  private _timing: number;
+  public timingMessage;
+  private _apiURLFull: string;
 
   constructor(private _service: ObserveService, private _logger: NGXLogger) {
   }
@@ -22,19 +24,21 @@ export class ObserveComponent implements OnInit {
   }
 
   changeApiUrl() {
-    this.apiURLFull = 'http://' + this.apiURL + '/api/ping';
-    this._logger.info('apiURLFull:', this.apiURLFull);
+    this._apiURLFull = 'http://' + this.apiURL + '/api/ping';
+    this._logger.info('apiURLFull:', this._apiURLFull);
 
-    const t0 = performance.now();
-    this._service.getGreetings(this.apiURLFull).subscribe(
+    const start = new Date().getTime();
+    this._service.getGreetings(this._apiURLFull).subscribe(
       data => {
         this.greetings = data;
         this._logger.debug('greetings:', this.greetings);
+
+        this._timing = (new Date().getTime() - start);
+        this.timingMessage = 'Response time: ~' + this._timing + ' ms';
       },
       err => this._logger.error(err.message),
       () => {
-        const t1 = performance.now();
-        return this._logger.info('Call to getGreetings took ' + (t1 - t0).toFixed(2) + ' ms');
+        this._logger.info(this.timingMessage);
       }
     );
 
