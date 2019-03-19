@@ -1,4 +1,4 @@
-# Go-based Microservices Observability Demo with Istio 1.0.x
+# Go-based Microservices Observability Demo with Istio 1.1.0
 
 _Project in Progress_
 
