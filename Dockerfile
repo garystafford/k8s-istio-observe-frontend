@@ -8,7 +8,6 @@ COPY . .
 RUN ls -alh && \
     npm install yarn && \
     yarn install && \
-    yarn add typescript@">=3.1.1 <3.3" --dev && \
     yarn run build
 
 FROM nginx:alpine
