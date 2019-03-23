@@ -12,8 +12,8 @@ export class ObserveComponent implements OnInit {
 
   public greetings: Greeting[];
   public apiURL: string;
-  private _timing: number;
   public timingMessage;
+  private _timing: number;
   private _apiURLFull: string;
 
   constructor(private _service: ObserveService, private _logger: NGXLogger) {
