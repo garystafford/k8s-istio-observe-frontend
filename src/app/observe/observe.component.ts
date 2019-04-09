@@ -24,7 +24,7 @@ export class ObserveComponent implements OnInit {
   }
 
   changeApiUrl() {
-    this._apiURLFull = 'http://' + this.apiURL + '/api/ping';
+    this._apiURLFull = 'http://' + this.apiURL + '/api/greeting';
     this._logger.info('apiURLFull:', this._apiURLFull);
 
     const start = new Date().getTime();

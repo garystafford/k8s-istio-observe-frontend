@@ -1,6 +1,6 @@
 {
   "name": "k8s-istio-observe-frontend",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -36,7 +36,7 @@
     "@types/jasmine": "^3.3.9",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "^11.10.4",
-    "codelyzer": "^4.0.1",
+    "codelyzer": "^5.0.0",
     "jasmine-core": "^3.3.0",
     "jasmine-spec-reporter": "^4.2.1",
     "karma": "^4.0.1",
