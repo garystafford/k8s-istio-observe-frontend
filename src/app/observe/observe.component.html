@@ -15,7 +15,7 @@
   <div class="row">
     <div *ngIf="greetings" id="greetings">
       <ul class="card-columns">
-        <li *ngFor="let greeting of greetings" class="list-group-item">
+        <li *ngFor="let greeting of greetings.greeting" class="list-group-item">
           <h5>{{greeting.service}}</h5>
           <i>{{greeting.message}}</i><br/>
           <small class="text-muted">{{greeting.id}}</small>

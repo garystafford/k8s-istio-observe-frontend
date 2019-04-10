@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ObserveService} from './observe.service';
-import {Greeting} from './Greeting';
 import {NGXLogger} from 'ngx-logger';
+import {Greetings} from './Greetings';
 
 @Component({
   selector: 'app-observe',
@@ -10,7 +10,7 @@ import {NGXLogger} from 'ngx-logger';
 })
 export class ObserveComponent implements OnInit {
 
-  public greetings: Greeting[];
+  public greetings: Greetings;
   public apiURL: string;
   public timingMessage;
   private _timing: number;
