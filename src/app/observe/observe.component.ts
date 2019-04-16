@@ -12,23 +12,24 @@ export class ObserveComponent implements OnInit {
 
   public greetings: Greetings;
   public apiURL: string;
-  public timingMessage;
+  public apiURLFull: string;
+  public timingMessage: string;
   private _timing: number;
-  private _apiURLFull: string;
 
   constructor(private _service: ObserveService, private _logger: NGXLogger) {
   }
 
   ngOnInit() {
     this.apiURL = 'api.dev.example-api.com';
+    this.apiURLFull = 'http://' + this.apiURL + '/api/v1/greeting';
   }
 
   changeApiUrl() {
-    this._apiURLFull = 'http://' + this.apiURL + '/api/greeting';
-    this._logger.info('apiURLFull:', this._apiURLFull);
+    this.apiURLFull = 'http://' + this.apiURL + '/api/v1/greeting';
+    this._logger.info('apiURLFull:', this.apiURLFull);
 
     const start = new Date().getTime();
-    this._service.getGreetings(this._apiURLFull).subscribe(
+    this._service.getGreetings(this.apiURLFull).subscribe(
       data => {
         this.greetings = data;
         this._logger.debug('greetings:', this.greetings);

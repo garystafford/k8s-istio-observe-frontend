@@ -16,3 +16,8 @@ li {
   page-break-inside: avoid;
   break-inside: avoid;
 }
+
+small {
+  margin-top:-6pt;
+  color: gray;
+}
