@@ -11,8 +11,8 @@ yarn install
 yarn add typescript@">=3.1.1 and <3.3.0"
 ng serve --open
 
-time docker build -t garystafford/angular-observe:1.3.0 . --no-cache
-docker push garystafford/angular-observe:1.3.0
+time docker build -t garystafford/angular-observe:1.4.0 . --no-cache
+docker push garystafford/angular-observe:1.4.0
 
-docker run -p 80:80 garystafford/angular-observe:1.3.0
+docker run -p 80:80 garystafford/angular-observe:1.4.0
 ```
