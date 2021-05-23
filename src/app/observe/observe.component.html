@@ -16,15 +16,15 @@
   </div>
   <div class="row">
     <div *ngIf="greetings" id="greetings">
-      <ul class="card-columns">
-        <li *ngFor="let greeting of greetings.greeting" class="list-group-item">
-          <h5>{{greeting.service}}</h5>
-          <i>{{greeting.message}}</i><br/>
-          <small class="text-muted">{{greeting.id}}</small>
+      <div class="card-columns">
+        <div *ngFor="let greet of greetings" class="card p-3">
+          <h5>{{greet.service}}</h5>
+          <i>{{greet.message}}</i><br/>
+          <small class="text-muted">{{greet.id}}</small>
           <br/>
-          <small class="text-muted">{{greeting.created}}</small>
-        </li>
-      </ul>
+          <small class="text-muted">{{greet.created | date: 'yyyy/MM/dd h:mm:ss a'}}</small>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">

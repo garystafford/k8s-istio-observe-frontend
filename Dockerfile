@@ -3,9 +3,8 @@ FROM node:lts-alpine AS builder
 WORKDIR /app
 COPY . .
 RUN ls -alh && \
-    npm install yarn --no-save && \
-    yarn && \
-    yarn run build
+    npm install && \
+    npm run build --configuration=docker
 
 FROM nginx:alpine
 COPY --from=builder /app/dist/* /usr/share/nginx/html/

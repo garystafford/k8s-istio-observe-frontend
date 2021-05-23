@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "a5f7db31-aa39-4f01-92d3-37d9f089dbe6"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -21,9 +24,12 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -42,6 +48,23 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ]
+            },
+            "docker": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.docker.ts"
+                }
+              ]
             }
           }
         },
@@ -53,6 +76,9 @@
           "configurations": {
             "production": {
               "browserTarget": "observe-stack:build:production"
+            },
+            "docker": {
+              "browserTarget": "observe-stack:build:docker"
             }
           }
         },

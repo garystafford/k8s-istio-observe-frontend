@@ -18,4 +18,9 @@ Refer to the post, [Kubernetes-based Microservice Observability with Istio Servi
 npm install yarn
 yarn install
 ng serve --open
+
+nvm install --lts
+nvm use --lts
+npm install
+
 ```

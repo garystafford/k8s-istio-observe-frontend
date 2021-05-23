@@ -16,5 +16,9 @@ protractor.conf.js
 README.md
 Notes.md
 package-lock.json
-
+.yarn
+yarn.lock
+.yarnrc.yml
+.pnp.js
+tslint.json
 .DS_Store
