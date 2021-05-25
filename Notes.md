@@ -12,7 +12,7 @@ yarn install
 ng serve --open
 
 time docker build -t garystafford/angular-observe:1.6.0 . --no-cache
-docker push garystafford/angular-observe:1.6.0
+docker push docker.io/garystafford/angular-observe:1.6.0
 
 docker run -p 80:80 garystafford/angular-observe:1.6.0
 ```

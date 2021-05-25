@@ -1,10 +1,7 @@
 <div class="container">
   <div class="row">
-    <label for="apiUrl">API URL:</label>&nbsp;
+    <label for="apiUrl">API URL</label>&nbsp;
     <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">http://</span>
-      </div>
       <input [(ngModel)]="apiURL" class="form-control" id="apiUrl" type="text" value={{apiURL}}/>&nbsp;&nbsp;
       <button (click)="changeApiUrl()" class="btn btn-primary">Submit</button>
     </div>
@@ -22,7 +19,7 @@
           <i>{{greet.message}}</i><br/>
           <small class="text-muted">{{greet.id}}</small>
           <br/>
-          <small class="text-muted">{{greet.created | date: 'yyyy/MM/dd h:mm:ss a'}}</small>
+          <small class="text-muted">{{greet.created | date: 'yyyy-MM-dd HH:mm:ss.SSS'}}</small>
         </div>
       </div>
     </div>

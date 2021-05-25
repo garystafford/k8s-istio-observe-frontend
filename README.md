@@ -15,13 +15,10 @@ Refer to the post, [Kubernetes-based Microservice Observability with Istio Servi
 ## Run UI Application
 
 ```bash
-npm install yarn
-yarn install
-ng serve --open
-
 nvm install --lts
 nvm use --lts
 
 npm install
-npm run build --configuration=docker
+npm run build
+ng serve
 ```

@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  configUrl: 'http://localhost/api/greeting'
+  greetUrl: 'http://localhost'
 };
