@@ -4,6 +4,7 @@ WORKDIR /app
 COPY . .
 RUN ls -alh && \
     npm install && \
+    npm install i -D typescript@4.2.4 && \
     npm run build --configuration=docker
 
 FROM nginx:alpine
