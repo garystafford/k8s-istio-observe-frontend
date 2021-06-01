@@ -1,5 +1,5 @@
 # https://www.codementor.io/yomateo/angular-docker-dockerize-your-app-in-5-minutes-video-included-oohw2mzuj
-FROM node:lts-alpine AS builder
+FROM node:lts-alpine3.13 AS builder
 WORKDIR /app
 COPY . .
 RUN ls -alh && \
