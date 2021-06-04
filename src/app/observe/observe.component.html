@@ -17,9 +17,9 @@
         <div *ngFor="let greet of greetings" class="card p-3">
           <h5>{{greet.service}}</h5>
           <i>{{greet.message}}</i><br/>
-          <small class="text-muted">{{greet.id}}</small>
+          <small class="text-muted">created: {{greet.created | date: 'yyyy-MM-dd HH:mm:ss.SSS'}}</small>
           <br/>
-          <small class="text-muted">{{greet.created | date: 'yyyy-MM-dd HH:mm:ss.SSS'}}</small>
+          <small class="text-muted">hostname: {{greet.hostname}}</small>
         </div>
       </div>
     </div>
