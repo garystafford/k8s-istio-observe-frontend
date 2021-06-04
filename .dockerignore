@@ -15,7 +15,7 @@ LICENSE.md
 protractor.conf.js
 README.md
 Notes.md
-package-lock.json
-.yarn
+package-*.json
+.yarn*
 tslint.json
 .DS_Store
