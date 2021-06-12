@@ -5,7 +5,7 @@ COPY . .
 RUN ls -alh && \
     npm install && \
     npm install i -D typescript@4.2.4 && \
-    npm run build --configuration=docker
+    npm run build --configuration=production
 
 FROM nginx:alpine
 COPY --from=builder /app/dist/* /usr/share/nginx/html/

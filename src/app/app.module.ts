@@ -19,7 +19,8 @@ import {environment} from '../environments/environment';
     HttpClientModule,
     FormsModule,
     LoggerModule.forRoot({
-      level: !environment.production ? NgxLoggerLevel.DEBUG : NgxLoggerLevel.INFO,
+      level: !environment.production ?
+        NgxLoggerLevel.DEBUG : NgxLoggerLevel.INFO,
       serverLogLevel: NgxLoggerLevel.INFO
     })
   ],
