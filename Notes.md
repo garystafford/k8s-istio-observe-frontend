@@ -26,3 +26,13 @@ david update
 npm install
 ng build --configuration=docker
 ```
+
+Trigger Docker image build and push.
+
+```shell
+target_tag=v2.0.2-grpc \
+  && git tag -d $target_tag \
+  && git push --delete origin $target_tag
+git tag -s $target_tag -m 'Update PROD env config' \
+  && git push origin $target_tag
+```
