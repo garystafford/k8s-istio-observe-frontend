@@ -16,6 +16,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Build and push Docker image
         run: |
+          git branch
           docker --version
           time docker build -t garystafford/angular-observe:2.0.0-grpc . --no-cache
           docker image ls | grep 'angular-observe'

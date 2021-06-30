@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  greetUrl: 'http://localhost'
+  configUrl: 'https://demo.api.example-api.com/api/greeting'
 };
