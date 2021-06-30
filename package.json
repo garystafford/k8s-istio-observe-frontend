@@ -1,6 +1,6 @@
 {
   "name": "k8s-istio-observe-frontend",
-  "version": "1.6.0",
+  "version": "2.00",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
