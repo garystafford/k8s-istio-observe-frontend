@@ -1,6 +1,6 @@
 {
-  "name": "k8s-istio-observe-frontend",
-  "version": "2.00",
+  "name": "k8s-istio-observe-frontend-grpc",
+  "version": "2.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
