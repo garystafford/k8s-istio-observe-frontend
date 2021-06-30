@@ -1,0 +1,15 @@
+on: [push, pull_request]
+name: Test build
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out GitHub repo
+        uses: actions/checkout@v2
+      - name: Build Docker image
+        run: |
+          git branch
+          docker --version
+          export tag=tmp
+          time docker build -t garystafford/angular-observe:$tag . --no-cache
+          docker image ls | grep 'angular-observe'
