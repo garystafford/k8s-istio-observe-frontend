@@ -4,7 +4,8 @@ on:
     tags:
       - "v*.*.*"
 jobs:
-  build:
+  push_to_registry:
+    name: Build and push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Set environment variable
@@ -18,10 +19,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-      - name: Build and push Docker image
-        run: |
-          git branch
-          docker --version
-          time docker build -t garystafford/angular-observe:${{ env.RELEASE_VERSION }} . --no-cache
-          docker image ls | grep 'angular-observe'
-          time docker push docker.io/garystafford/angular-observe:${{ env.RELEASE_VERSION }}
+      - name: Build image and push to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: garystafford/angular-observe:${{ env.RELEASE_VERSION }}
