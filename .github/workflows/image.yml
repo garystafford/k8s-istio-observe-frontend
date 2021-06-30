@@ -1,0 +1,22 @@
+name: Build and publish Docker image
+on:
+  push:
+    tags:
+      - "v*.*.*"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out GitHub repo
+        uses: actions/checkout@v2
+      - name: Log into Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: Build and push Docker image
+        run: |
+          docker --version
+          time docker build -t garystafford/angular-observe:2.0.0-grpc . --no-cache
+          docker image ls | grep 'angular-observe-'
+          time docker push docker.io/garystafford/angular-observe:2.0.0-grpc

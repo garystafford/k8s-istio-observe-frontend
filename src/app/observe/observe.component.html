@@ -14,7 +14,7 @@
   <div class="row">
     <div *ngIf="greetings" id="greetings">
       <div class="card-columns">
-        <div *ngFor="let greet of greetings" class="card p-3">
+        <div *ngFor="let greet of greetings.greeting" class="card p-3">
           <h5>{{greet.service}}</h5>
           <i>{{greet.message}}</i><br/>
           <small class="text-muted">created: {{greet.created | date: 'yyyy-MM-dd HH:mm:ss.SSS'}}</small>
