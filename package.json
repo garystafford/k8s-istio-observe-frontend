@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,12 +22,12 @@
     "@angular/router": "^12.0.1",
     "bootstrap": "^5.0.1",
     "build": "^0.1.4",
-    "core-js": "^3.13.0",
+    "core-js": "^3.15.2",
     "jquery": "^3.6.0",
     "ngx-logger": "^4.2.2",
     "npm": "^7.14.0",
     "run": "^1.4.0",
-    "rxjs": "^6.4.0",
+    "rxjs": "^7.1.0",
     "tslib": "^2.2.0",
     "zone.js": "^0.11.4"
   },
@@ -39,7 +39,7 @@
     "@angular/language-service": "^12.0.1",
     "@types/jasmine": "^3.7.4",
     "@types/jasminewd2": "^2.0.2",
-    "@types/node": "^15.6.1",
+    "@types/node": "^15.12.5",
     "codelyzer": "^6.0.2",
     "eslint": "^7.27.0",
     "jasmine-core": "^3.7.1",
