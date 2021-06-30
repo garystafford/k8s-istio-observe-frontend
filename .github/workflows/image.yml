@@ -18,6 +18,6 @@ jobs:
         run: |
           git branch
           docker --version
-          time docker build -t garystafford/angular-observe:2.0.0-grpc . --no-cache
+          time docker build -t garystafford/angular-observe:${{ github.event.release.tag_name }} . --no-cache
           docker image ls | grep 'angular-observe'
-          time docker push docker.io/garystafford/angular-observe:2.0.0-grpc
+          time docker push docker.io/garystafford/angular-observe:${{ github.event.release.tag_name }}
