@@ -8,4 +8,6 @@ RUN ls -alh && \
     npm run build --configuration=production
 
 FROM nginx:alpine
+LABEL maintainer="Gary A. Stafford <gary.a.stafford@gmail.com>"
+ENV REFRESHED_AT 2021-06-29
 COPY --from=builder /app/dist/* /usr/share/nginx/html/
