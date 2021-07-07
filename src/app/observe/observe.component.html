@@ -1,13 +1,15 @@
 <div class="container">
   <div class="row">
+    <h3>Kubernetes Observability Demo</h3>
+    <br />
     <label for="apiUrl">API URL</label>&nbsp;
     <div class="input-group mb-3">
-      <input [(ngModel)]="apiURL" class="form-control" id="apiUrl" type="text" value={{apiURL}}/>&nbsp;&nbsp;
+      <input [(ngModel)]="apiURL" class="form-control" id="apiUrl" type="text" value={{apiURL}} />&nbsp;&nbsp;
       <button (click)="changeApiUrl()" class="btn btn-primary">Submit</button>
     </div>
     <small><i>{{apiURLFull}}</i></small>
   </div>
-  <br/>
+  <br />
   <div class="row">
     <h4>API Response</h4>
   </div>
@@ -16,9 +18,9 @@
       <div class="card-columns">
         <div *ngFor="let greet of greetings.greeting" class="card p-3">
           <h5>{{greet.service}}</h5>
-          <i>{{greet.message}}</i><br/>
+          <i>{{greet.message}}</i><br />
           <small class="text-muted">created: {{greet.created | date: 'yyyy-MM-dd HH:mm:ss.SSS'}}</small>
-          <br/>
+          <br />
           <small class="text-muted">hostname: {{greet.hostname}}</small>
         </div>
       </div>
