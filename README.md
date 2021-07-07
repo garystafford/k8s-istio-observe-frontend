@@ -1,5 +1,8 @@
 # Kubernetes-based Microservice Observability with Istio Service Mesh
 
+[![Test build](https://github.com/garystafford/k8s-istio-observe-frontend/actions/workflows/build.yml/badge.svg)](https://github.com/garystafford/k8s-istio-observe-frontend/actions/workflows/build.yml)
+[![Build and publish Docker image](https://github.com/garystafford/k8s-istio-observe-frontend/actions/workflows/image.yml/badge.svg)](https://github.com/garystafford/k8s-istio-observe-frontend/actions/workflows/image.yml)
+
 Source code for the two-part blog
 post, [Kubernetes-based Microservice Observability with Istio Service Mesh](https://garystafford.medium.com/kubernetes-based-microservice-observability-with-istio-service-mesh-part-1-of-2-19084d13a866). See the post for detailed instructions.
 
