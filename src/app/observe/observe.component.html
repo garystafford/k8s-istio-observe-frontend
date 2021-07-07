@@ -3,8 +3,8 @@
     <h3>Kubernetes Observability Demo</h3>
     <br/>
     <label for="apiUrl">API Hostname</label>
-    <div class="input-group mb-3">
-      <input [(ngModel)]="apiURL" class="form-control" id="apiUrl" type="text" value={{apiURL}}/>&nbsp;&nbsp;
+    <div class="input-group mb-2">
+      <input [(ngModel)]="apiURL" class="form-control" id="apiUrl" type="text" value={{apiURL}}/>
       <button (click)="changeApiUrl()" class="btn btn-primary">Submit</button>
     </div>
     <small><i>{{apiURLFull}}</i></small>
